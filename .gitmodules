@@ -1,0 +1,6 @@
+[submodule "application"]
+	path = application
+	url = https://github.com/LucasMartines01/application.git
+[submodule "remote-config"]
+	path = remote-config
+	url = https://github.com/LucasMartines01/remote-config.git
