@@ -41,7 +41,7 @@ jobs:
               <server>
                 <id>github</id>
                 <username>${{ secrets.GITHUB_ACTOR }}</username>
-                <password>${{ secrets.MAVEN_DEPLOY_PASSWORD }}</password>
+                <password>${{ secrets.GITHUB_TOKEN }}</password>
               </server>
             </servers>
           </settings>' > ~/.m2/settings.xml
@@ -53,5 +53,4 @@ jobs:
         run: mvn clean install -B -DskipTests
 
       - name: Deploy to GitHub Packages
-        if: github.ref == 'refs/heads/main' && github.event_name == 'push'
-        run: mvn deploy -DskipTests
+        run: mvn deploy -N -DskipTests
