@@ -40,8 +40,8 @@ jobs:
             <servers>
               <server>
                 <id>github</id>
-                <username>${{ secrets.GITHUB_ACTOR }}</username>
-                <password>${{ secrets.GITHUB_TOKEN }}</password>
+                <username>${{ secrets.USERNAME_MVN }}</username>
+                <password>${{ secrets.TOKEN_MVN }}</password>
               </server>
             </servers>
           </settings>' > ~/.m2/settings.xml
