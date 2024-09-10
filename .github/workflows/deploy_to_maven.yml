@@ -28,7 +28,7 @@ jobs:
           path: ~/.m2/repository
           key: "${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}"
           restore-keys: |
-              ${{ runner.os }}-maven-
+            ${{ runner.os }}-maven-
 
       - name: Set up Maven settings
         run: |
@@ -42,6 +42,9 @@ jobs:
               </server>
             </servers>
           </settings>' > ~/.m2/settings.xml
+
+      - name: List files
+        run: ls -R
 
       - name: Build and Test with Maven
         run: mvn clean install -B -DskipTests
