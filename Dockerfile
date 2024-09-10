@@ -3,7 +3,7 @@ WORKDIR /app
 COPY . .
 RUN mvn clean install -DskipTests
 
-FROM openjdk:21
+FROM eclipse-temurin:21-jre-alpine
 WORKDIR /app
 EXPOSE 8080
 COPY --from=builder /app/application/target/*.jar app.jar
