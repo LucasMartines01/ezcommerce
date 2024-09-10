@@ -40,7 +40,7 @@ jobs:
               <server>
                 <id>github</id>
                 <username>${{ secrets.GITHUB_ACTOR }}</username>
-                <password>${{ secrets.GITHUB_TOKEN }}</password>
+                <password>${{ secrets.MAVEN_DEPLOY_PASSWORD }}</password>
               </server>
             </servers>
           </settings>' > ~/.m2/settings.xml
