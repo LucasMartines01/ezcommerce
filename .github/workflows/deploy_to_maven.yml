@@ -46,9 +46,6 @@ jobs:
             </servers>
           </settings>' > ~/.m2/settings.xml
 
-      - name: List files
-        run: ls -R
-
       - name: Build and Test with Maven
         run: mvn clean install -B -DskipTests
 
