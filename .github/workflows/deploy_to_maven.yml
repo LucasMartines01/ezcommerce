@@ -1,13 +1,7 @@
 name: Maven Build and Deploy
 
 on:
-  push:
-    branches:
-      - main
-  pull_request:
-    branches:
-      - main
-
+  workflow_dispatch: # Manually trigger the workflow
 jobs:
   build:
     runs-on: ubuntu-latest
