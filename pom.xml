@@ -12,7 +12,7 @@
 
     <groupId>com.ezliv</groupId>
     <artifactId>ezcommerce</artifactId>
-    <version>1.0.5</version>
+    <version>1.0.6</version>
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
