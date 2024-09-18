@@ -18,6 +18,19 @@ jobs:
           submodules: true
           token: ${{ secrets.MAVEN_DEPLOY_PASSWORD }}
 
+      - name: Set up Maven settings
+        run: |
+          mkdir -p ~/.m2
+          echo '<settings>
+            <servers>
+              <server>
+                <id>github</id>
+                <username>${{ secrets.USERNAME_MVN }}</username>
+                <password>${{ secrets.TOKEN_MVN }}</password>
+              </server>
+            </servers>
+          </settings>' > ~/.m2/settings.xml
+
       - name: setup Docker Build
         uses: docker/setup-buildx-action@v2.0.0
 
