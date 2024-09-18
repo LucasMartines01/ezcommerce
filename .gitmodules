@@ -4,3 +4,6 @@
 [submodule "remote-config"]
 	path = remote-config
 	url = https://github.com/LucasMartines01/remote-config.git
+[submodule "section-manager"]
+	path = section-manager
+	url = https://github.com/LucasMartines01/section-manager.git
