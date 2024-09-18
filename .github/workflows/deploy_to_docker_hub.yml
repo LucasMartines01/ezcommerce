@@ -18,6 +18,14 @@ jobs:
           submodules: true
           token: ${{ secrets.MAVEN_DEPLOY_PASSWORD }}
 
+      - name: Cache Maven repository
+        uses: actions/cache@v3
+        with:
+          path: ~/.m2/repository
+          key: "${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}"
+          restore-keys: |
+            ${{ runner.os }}-maven-
+
       - name: Set up Maven settings
         run: |
           mkdir -p ~/.m2
