@@ -40,8 +40,5 @@ jobs:
             </servers>
           </settings>' > ~/.m2/settings.xml
 
-      - name: Build and Test with Maven
-        run: mvn clean install -B -DskipTests
-
       - name: Deploy to GitHub Packages
         run: mvn deploy -N -B -U -DskipTests
